@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portfolio — HST × Bioengineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css?v=11"/>
+</head>
+<body>
+<div id="cur"></div>
+
+<!-- NAV -->
+<nav>
+  <span class="nid">HST × <em>BE</em></span>
+  <ul class="nlinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#orgs">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO: split screen -->
+<section id="hero">
+  <canvas id="hc"></canvas>
+  <!-- LEFT: pink panel -->
+  <div class="hl">
+    <div class="hl-bg"></div>
+    <canvas id="hero-fade-canvas"></canvas>
+    <div class="hl-overlay"></div>
+    <div class="hl-inner">
+      <div class="h-eye">ETH Zürich · UC Berkeley · Medical Technology MSc</div>
+      <h1 class="h-name-big">Jillian</h1>
+      <p class="h-sub">Biomedical engineer building tools for medicine — gut microbiome, neurotech, AI. Also: dancer, traveller, maker of things.</p>
+      <p class="h-sub">MSc student building tools at the intersection of biomedical engineering, AI, and the microbiome.</p>
+      <div class="hbtns">
+        <a href="#projects" class="bp">Projects →</a>
+        <a href="#contact" class="bg">Say hello</a>
+      </div>
+    </div>
+    <div class="hl-foot">
+      <span class="vlbl-h">Berkeley CA → Zürich CH</span>
+    </div>
+  </div>
+
+  <!-- RIGHT: photo + currently -->
+  <div class="hr">
+    <!-- animated placeholder -->
+    <div class="hr-photo">
+      <canvas id="bio-canvas"></canvas>
+    </div>
+    <!-- currently section -->
+    <div class="hr-currently">
+      <div class="hr-currently-title">Currently</div>
+      <div class="currently-list">
+        <div class="cly-row">
+          <span class="cly-k">Building</span>
+          <span class="cly-v">CRISPR gRNA design pipeline + gut sonification tools</span>
+        </div>
+        <div class="cly-row">
+          <span class="cly-k">Reading</span>
+          <span class="cly-v">Moral Ambition — Rutger Bregman</span>
+        </div>
+        <div class="cly-row">
+          <span class="cly-k">Listening</span>
+          <span class="cly-v">Whatever makes sense to move to</span>
+        </div>
+        <div class="cly-row">
+          <span class="cly-k">Based</span>
+          <span class="cly-v">Berkeley, CA — back to Zürich soon</span>
+        </div>
+        <div class="cly-row">
+          <span class="cly-k">Dancing</span>
+          <span class="cly-v">Exploring salsa, loving kpop and hip hop</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="a-side fi">
+    <div class="a-num">01</div>
+    <div class="a-slbl">About</div>
+  </div>
+  <div class="a-main fi" style="transition-delay:.1s">
+    <h2>On the<br/><em>edges.</em></h2>
+    <p>I'm a <strong>Health Sciences & Technology</strong> MSc student at ETH Zürich on the Medical Technology track, currently on a visiting semester at <strong>UC Berkeley Bioengineering</strong>. Growing up across three countries probably explains why I'm most comfortable at the edges between disciplines.</p>
+    <p>My work lives at the intersection of <em>biomedical engineering</em>, <em>computational biology</em>, <em>cognitive neuroscience</em>, and <em>AI/ML health applications</em>. I'm drawn to the gut microbiome and the gut-brain axis — two of the body's most interesting and underexplored interfaces.</p>
+    <p>I also founded a <strong>non-profit dance studio</strong> and the <strong>Taiwanese Student Association Switzerland</strong>. Building community is as interesting a design problem as building software. Rigor and beauty are not at odds — the best science is, in some sense, also art.</p>
+    <div class="chips">
+      <span class="chip p">Neurotech</span>
+      <span class="chip p">Cognitive neuroscience</span>
+      <span class="chip p">Gut microbiome</span>
+      <span class="chip p">Biosensors</span>
+      <span class="chip p">CRISPR</span>
+      <span class="chip p">AI/ML in health</span>
+      <span class="chip">Glycemic modeling</span>
+      <span class="chip">Biocompatibility</span>
+      <span class="chip">Artificial organs</span>
+      <span class="chip g">Dance</span>
+      <span class="chip g">Music</span>
+      <span class="chip g">Philosophy</span>
+      <span class="chip g">Art</span>
+      <span class="chip">Travel</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS: archive rows -->
+<section id="projects">
+  <div class="pj-hd fi">
+    <h2>Projects.</h2>
+    <span class="pj-ct">06 projects</span>
+  </div>
+  <a href="https://biomesound.vercel.app" target="_blank" rel="noopener" class="pj-row fi">
+    <span class="pn">01</span>
+    <div class="pb">
+      <div class="pt">Biome Sound</div>
+      <div class="pd">Real-time gut microbiome sonification. Maps biosensor signals — H₂, CH₄, pH, temperature — plus breath analysis and endoscopic imaging to audio output. The gut, made audible.</div>
+      <div class="ps">Python · Biosensors · Audio synthesis · Vercel</div>
+    </div>
+    <div class="pr"><span class="bdg live">Live</span><span class="parr">↗</span></div>
+  </a>
+  <a href="https://microbiome-rx.up.railway.app/" target="_blank" rel="noopener" class="pj-row fi" style="transition-delay:.05s">
+    <span class="pn">02</span>
+    <div class="pb">
+      <div class="pt">MicrobiomeRx</div>
+      <div class="pd">Drug-microbiome interaction analyzer built with FastAPI and the Claude API. Surfaces how pharmaceutical compounds interact with gut flora — a relationship medicine has mostly ignored until now.</div>
+      <div class="ps">FastAPI · Claude API · Microbiome DB · Python</div>
+    </div>
+    <div class="pr"><span class="bdg live">Deployed</span><span class="parr">↗</span></div>
+  </a>
+  <a href="https://gutmind-explorer.up.railway.app/" target="_blank" rel="noopener" class="pj-row fi" style="transition-delay:.10s">
+    <span class="pn">03</span>
+    <div class="pb">
+      <div class="pt">GutMind Explorer</div>
+      <div class="pd">Gut-brain microbiome correlation visualizer trained on synthetic data from published studies. Explores the enteric nervous system through interactive data graphics.</div>
+      <div class="ps">React · D3.js · Synthetic data · Next.js</div>
+    </div>
+    <div class="pr"><span class="bdg live">Deployed</span><span class="parr">↗</span></div>
+  </a>
+  <a href="https://glycocast-risk.streamlit.app/" target="_blank" rel="noopener" class="pj-row fi" style="transition-delay:.15s">
+    <span class="pn">04</span>
+    <div class="pb">
+      <div class="pt">GlycoCast</div>
+      <div class="pd">Glycemic prediction tool that forecasts blood glucose trajectories from continuous sensor data using ML — helping people understand how their body responds before it responds.</div>
+      <div class="ps">Time-series ML · CGM data · Python · Deployed</div>
+    </div>
+    <div class="pr"><span class="bdg live">Deployed</span><span class="parr">↗</span></div>
+  </a>
+  <a href="https://github.com/Laney-Seligson/BioE_134-234_FinalProject" target="_blank" rel="noopener" class="pj-row fi" style="transition-delay:.20s">
+    <span class="pn">05</span>
+    <div class="pb">
+      <div class="pt">CRISPR gRNA Design System</div>
+      <div class="pd">AI-assisted CRISPR biodesign pipeline using MCP server architecture. Off-target prediction, guide RNA scoring, and edit verification in one unified environment.</div>
+      <div class="ps">MCP · CRISPR · Biodesign AI · Python</div>
+    </div>
+    <div class="pr"><span class="bdg wip">In progress</span><span class="parr">↗</span></div>
+  </a>
+  <a href="https://curec.ch/" target="_blank" rel="noopener" class="pj-row fi" style="transition-delay:.25s">
+    <span class="pn">06</span>
+    <div class="pb">
+      <div class="pt">CURE-C</div>
+      <div class="pd">Integration & Biocompatibility Engineer on a student team building a prototype total artificial heart. At the boundary of materials science, fluid dynamics, and surgical reality.</div>
+      <div class="ps">Biocompatibility · Mechanical design · SOLIDWORKS</div>
+    </div>
+    <div class="pr"><span class="bdg team">Team</span><span class="parr">↗</span></div>
+  </a>
+</section>
+
+<!-- ORGS -->
+<section id="orgs">
+  <div class="og-hd fi"><h2>Organizations.</h2></div>
+  <div class="og-grid">
+    <div class="oc fi">
+      <div class="oc-wm">R</div>
+      <span class="oc-role">Founder</span>
+      <h3>The Rookie Dance Studio</h3>
+      <p>A non-profit dance studio built on the idea that movement belongs to everyone. Community-focused, technically serious, and a lot of fun.</p>
+    </div>
+    <div class="oc fi" style="transition-delay:.1s">
+      <div class="oc-wm">T</div>
+      <span class="oc-role">Founder</span>
+      <h3>Taiwanese Student Association Switzerland</h3>
+      <p>Connecting Taiwanese students across Swiss universities — shared identity, shared meals, and occasionally shared lab stress.</p>
+    </div>
+    <div class="oc fi" style="transition-delay:.2s">
+      <div class="oc-wm">C</div>
+      <span class="oc-role">Integration & Biocompatibility Engineer</span>
+      <h3>CURE-C Student Team</h3>
+      <p>Contributing to a student-led total artificial heart project — bridging disciplines and making sure what we build can actually live inside a human body.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div id="mq">
+  <div class="mq-w">
+    <div class="mq-t">
+      <span class="mi a">Dance</span><span class="ms">·</span>
+      <span class="mi">Gut microbiome</span><span class="ms">·</span>
+      <span class="mi a">Music</span><span class="ms">·</span>
+      <span class="mi">Philosophy of mind</span><span class="ms">·</span>
+      <span class="mi a">Art</span><span class="ms">·</span>
+      <span class="mi">Biosensors</span><span class="ms">·</span>
+      <span class="mi">Travel</span><span class="ms">·</span>
+      <span class="mi a">Sonification</span><span class="ms">·</span>
+      <span class="mi">CRISPR</span><span class="ms">·</span>
+      <span class="mi">Community building</span><span class="ms">·</span>
+      <span class="mi a">Dance</span><span class="ms">·</span>
+      <span class="mi">Gut microbiome</span><span class="ms">·</span>
+      <span class="mi a">Music</span><span class="ms">·</span>
+      <span class="mi">Philosophy of mind</span><span class="ms">·</span>
+      <span class="mi a">Art</span><span class="ms">·</span>
+      <span class="mi">Biosensors</span><span class="ms">·</span>
+      <span class="mi">Travel</span><span class="ms">·</span>
+      <span class="mi a">Sonification</span><span class="ms">·</span>
+      <span class="mi">CRISPR</span><span class="ms">·</span>
+      <span class="mi">Community building</span><span class="ms">·</span>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="ct-bg">Hello.</div>
+  <div class="ct-kick fi v">Let's connect</div>
+  <h2 class="ct-h fi v" style="transition-delay:.05s">Say<br/><em>hello.</em></h2>
+  <a href="mailto:jillianho.jh@gmail.com" class="ct-email fi v" style="transition-delay:.1s">jillianho.jh@gmail.com</a>
+  <div class="ct-links fi v" style="transition-delay:.15s">
+    <a href="https://github.com/jillianho" target="_blank" class="cl">
+      <span class="cl-lbl">GitHub</span><span class="cl-val">github.com/jillianho</span>
+    </a>
+    <a href="https://www.linkedin.com/in/jillianho/" target="_blank" class="cl">
+      <span class="cl-lbl">LinkedIn</span><span class="cl-val">linkedin.com/in/jillianho</span>
+    </a>
+    <a href="https://biomesound.vercel.app" target="_blank" class="cl">
+      <span class="cl-lbl">Biome Sound</span><span class="cl-val">biomesound.vercel.app</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-sig">© 2026 — ETH Zürich × UC Berkeley · Built with <span>♥</span></div>
+  <div class="f-links">
+    <a href="https://github.com/jillianho" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/jillianho/" target="_blank">LinkedIn</a>
+    <a href="https://biomesound.vercel.app" target="_blank">Biome Sound</a>
+    <a href="#hero">Top ↑</a>
+  </div>
+</footer>
+
+<!-- TWEAKS -->
+<div id="tp">
+  <div class="tp-t">Tweaks</div>
+  <div class="tp-r">
+    <div class="tp-l">Accent</div>
+    <div class="tp-sw">
+      <div class="tp-s active" id="sw-pink"    style="background:oklch(0.72 0.26 342)"  onclick="setAccent('pastel')"></div>
+      <div class="tp-s"        id="sw-pastel"  style="background:oklch(0.80 0.12 342)"  onclick="setAccent('pastel')"></div>
+      <div class="tp-s"        id="sw-teal"    style="background:oklch(0.60 0.22 175)" onclick="setAccent('teal')"></div>
+      <div class="tp-s"        id="sw-cobalt"  style="background:oklch(0.55 0.25 255)" onclick="setAccent('cobalt')"></div>
+      <div class="tp-s"        id="sw-amber"   style="background:oklch(0.62 0.18 55)"  onclick="setAccent('amber')"></div>
+    </div>
+  </div>
+  <div class="tp-r">
+    <div class="tp-l">Waveform</div>
+    <div class="tp-bb">
+      <button class="tp-b active" id="tb-won"  onclick="setWave(true)">On</button>
+      <button class="tp-b"        id="tb-woff" onclick="setWave(false)">Off</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// CURSOR
+const cur = document.getElementById('cur');
+document.addEventListener('mousemove', e => {
+  cur.style.left = e.clientX + 'px';
+  cur.style.top  = e.clientY + 'px';
+});
+document.querySelectorAll('a,button').forEach(el => {
+  el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+  el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+});
+
+// HERO WAVEFORM
+const canvas = document.getElementById('hc');
+const ctx = canvas.getContext('2d');
+let waveOn = true, tick = 0;
+function resize() {
+  canvas.width  = canvas.offsetWidth  * devicePixelRatio;
+  canvas.height = canvas.offsetHeight * devicePixelRatio;
+  ctx.scale(devicePixelRatio, devicePixelRatio);
+}
+resize();
+window.addEventListener('resize', resize);
+const WAVES = [
+  { f:.007, a:55, s:.0007, ph:0,   col:'oklch(0.72 0.26 342)', op:.50 },
+  { f:.013, a:30, s:.0014, ph:2.5, col:'oklch(0.72 0.26 342)', op:.28 },
+  { f:.005, a:70, s:.0004, ph:5.0, col:'oklch(0.84 0.22 132)',   op:.20 },
+  { f:.019, a:18, s:.002,  ph:1.3, col:'rgba(255,255,255,0.2)',  op:.15 },
+];
+function draw() {
+  if (!waveOn) { ctx.clearRect(0,0,canvas.offsetWidth,canvas.offsetHeight); return; }
+  ctx.clearRect(0,0,canvas.offsetWidth,canvas.offsetHeight);
+  const W = canvas.offsetWidth, H = canvas.offsetHeight, midY = H * .6;
+  WAVES.forEach(w => {
+    ctx.beginPath();
+    ctx.strokeStyle = w.col;
+    ctx.globalAlpha = w.op;
+    ctx.lineWidth = 1.2;
+    for (let x=0; x<=W; x+=2) {
+      const y = midY
+        + Math.sin(x*w.f + tick*w.s*1000 + w.ph)*w.a
+        + Math.sin(x*w.f*2.7 + tick*w.s*500 + w.ph)*w.a*.28;
+      x===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+  });
+  ctx.globalAlpha = 1;
+  tick++;
+  requestAnimationFrame(draw);
+}
+draw();
+
+// SCROLL FADE
+const obs = new IntersectionObserver(entries =>
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('v'); }),
+  { threshold:.10 }
+);
+document.querySelectorAll('.fi:not(.v)').forEach(el => obs.observe(el));
+
+// TWEAKS
+const ACCENTS = {
+  crimson: { pink:'oklch(0.50 0.22 18)',  pdim:'oklch(0.28 0.12 18)',  lime:'oklch(0.84 0.22 132)' },
+  pastel:  { pink:'oklch(0.80 0.12 342)', pdim:'oklch(0.94 0.04 342)', lime:'oklch(0.84 0.22 132)' },
+  teal:    { pink:'oklch(0.60 0.22 175)', pdim:'oklch(0.38 0.14 175)', lime:'oklch(0.80 0.18 60)'  },
+  cobalt:  { pink:'oklch(0.55 0.25 255)', pdim:'oklch(0.36 0.18 255)', lime:'oklch(0.84 0.22 132)' },
+  amber:   { pink:'oklch(0.62 0.18 55)',  pdim:'oklch(0.42 0.12 55)',  lime:'oklch(0.70 0.22 132)' },
+};
+function setAccent(k) {
+  const a = ACCENTS[k], r = document.documentElement.style;
+  r.setProperty('--pink', a.pink);
+  r.setProperty('--pdim', a.pdim);
+  r.setProperty('--lime', a.lime);
+  ['crimson','pastel','teal','cobalt','amber'].forEach(n => document.getElementById('sw-'+n)?.classList.toggle('active', n===k));
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits:{accent:k}}, '*');
+}
+function setWave(on) {
+  waveOn = on;
+  document.getElementById('tb-won').classList.toggle('active', on);
+  document.getElementById('tb-woff').classList.toggle('active', !on);
+  if (on) draw();
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits:{waveform:on}}, '*');
+}
+window.addEventListener('message', e => {
+  if (e.data?.type==='__activate_edit_mode')   document.getElementById('tp').classList.add('open');
+  if (e.data?.type==='__deactivate_edit_mode') document.getElementById('tp').classList.remove('open');
+});
+// HERO IMAGE CROSSFADE
+(function() {
+  const fc = document.getElementById('hero-fade-canvas');
+  if (!fc) return;
+  const fx = fc.getContext('2d');
+  const imgs = ['hero-bg.png','hero-bg2.png'].map(src => {
+    const img = new Image(); img.src = src; return img;
+  });
+  let W, H;
+  function rsz() {
+    W = fc.offsetWidth; H = fc.offsetHeight;
+    fc.width = W * devicePixelRatio; fc.height = H * devicePixelRatio;
+    fx.scale(devicePixelRatio, devicePixelRatio);
+  }
+  rsz(); window.addEventListener('resize', rsz);
+
+  let loaded = 0;
+  imgs.forEach(img => img.onload = () => { loaded++; if(loaded===2) startFade(); });
+
+  const HOLD = 7000;   // ms to hold each image
+  const FADE = 4000;   // ms to crossfade
+  const CYCLE = HOLD + FADE;
+
+  function drawImg(img, alpha) {
+    if (!img.complete || !img.naturalWidth) return;
+    fx.globalAlpha = alpha;
+    // cover-fit
+    const iw = img.naturalWidth, ih = img.naturalHeight;
+    const scale = Math.max(W/iw, H/ih);
+    const dw = iw*scale, dh = ih*scale;
+    const dx = (W-dw)/2, dy = (H-dh)/2;
+    fx.drawImage(img, dx, dy, dw, dh);
+    fx.globalAlpha = 1;
+  }
+
+  function startFade() {
+    let start = null;
+    function frame(ts) {
+      if (!start) start = ts;
+      const elapsed = (ts - start) % (CYCLE * 2);
+      fx.clearRect(0, 0, W, H);
+
+      if (elapsed < HOLD) {
+        // show img 0 fully
+        drawImg(imgs[0], 1);
+      } else if (elapsed < CYCLE) {
+        // fade img 0 → img 1
+        const t = (elapsed - HOLD) / FADE;
+        drawImg(imgs[0], 1 - t);
+        drawImg(imgs[1], t);
+      } else if (elapsed < CYCLE + HOLD) {
+        // show img 1 fully
+        drawImg(imgs[1], 1);
+      } else {
+        // fade img 1 → img 0
+        const t = (elapsed - CYCLE - HOLD) / FADE;
+        drawImg(imgs[1], 1 - t);
+        drawImg(imgs[0], t);
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+})();
+
+// TWINKLING STARS over hero image
+(function() {
+  const hl = document.querySelector('.hl');
+  if (!hl) return;
+  const sc = document.createElement('canvas');
+  sc.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2';
+  hl.appendChild(sc);
+  const sx = sc.getContext('2d');
+  let SW, SH;
+  function rsz() { SW=sc.offsetWidth; SH=sc.offsetHeight; sc.width=SW*devicePixelRatio; sc.height=SH*devicePixelRatio; sx.scale(devicePixelRatio,devicePixelRatio); }
+  rsz(); window.addEventListener('resize', rsz);
+  const stars = Array.from({length:55}, () => ({
+    x: Math.random(), y: Math.random() * .75,
+    r: .5 + Math.random() * 1.2,
+    phase: Math.random() * Math.PI * 2,
+    speed: .012 + Math.random() * .025,
+    base: .3 + Math.random() * .6,
+  }));
+  function drawStars() {
+    sx.clearRect(0,0,SW,SH);
+    stars.forEach(s => {
+      s.phase += s.speed;
+      const op = s.base * (.5 + .5 * Math.sin(s.phase));
+      sx.beginPath();
+      sx.arc(s.x*SW, s.y*SH, s.r, 0, Math.PI*2);
+      sx.fillStyle = `rgba(255,255,255,${op.toFixed(3)})`;
+      sx.fill();
+    });
+    requestAnimationFrame(drawStars);
+  }
+  drawStars();
+})();
+
+window.parent.postMessage({type:'__edit_mode_available'}, '*');
+
+// BIO PARTICLE ANIMATION
+(function() {
+  const bc = document.getElementById('bio-canvas');
+  if (!bc) return;
+  const bx = bc.getContext('2d');
+  let W, H;
+  function resizeBio() {
+    W = bc.offsetWidth; H = bc.offsetHeight;
+    bc.width = W * devicePixelRatio; bc.height = H * devicePixelRatio;
+    bx.scale(devicePixelRatio, devicePixelRatio);
+  }
+  resizeBio();
+  window.addEventListener('resize', () => { resizeBio(); });
+
+  const N = 38;
+  const particles = Array.from({length: N}, () => ({
+    x: Math.random(), y: Math.random(),
+    r: 2 + Math.random() * 5,
+    vx: (Math.random()-.5)*.00018, vy: (Math.random()-.5)*.00018,
+    col: Math.random() > .72 ? [132,222,84] : [240,100,160],
+    opacity: .18 + Math.random() * .42,
+    pulse: Math.random() * Math.PI * 2,
+    pulseSpeed: .008 + Math.random() * .012,
+  }));
+
+  function drawBio() {
+    bx.clearRect(0,0,W,H);
+    // connections
+    for (let i=0;i<N;i++) for (let j=i+1;j<N;j++) {
+      const a=particles[i], b=particles[j];
+      const dx=(a.x-b.x)*W, dy=(a.y-b.y)*H, d=Math.sqrt(dx*dx+dy*dy);
+      if (d<100) {
+        bx.beginPath();
+        bx.strokeStyle=`rgba(240,236,230,${(.07*(1-d/100)).toFixed(3)})`;
+        bx.lineWidth=.5;
+        bx.moveTo(a.x*W,a.y*H); bx.lineTo(b.x*W,b.y*H); bx.stroke();
+      }
+    }
+    // dots
+    particles.forEach(p => {
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=1; if(p.x>1)p.x=0;
+      if(p.y<0)p.y=1; if(p.y>1)p.y=0;
+      p.pulse+=p.pulseSpeed;
+      const pr = p.r*(1+.18*Math.sin(p.pulse));
+      const op = p.opacity*(.8+.2*Math.sin(p.pulse));
+      bx.beginPath();
+      bx.arc(p.x*W,p.y*H,pr,0,Math.PI*2);
+      bx.fillStyle=`rgba(${p.col[0]},${p.col[1]},${p.col[2]},${op.toFixed(3)})`;
+      bx.fill();
+    });
+    requestAnimationFrame(drawBio);
+  }
+  drawBio();
+})();
+</script>
+</body>
+</html>
