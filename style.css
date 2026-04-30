@@ -73,6 +73,14 @@ h1 .dim{color:rgba(255,255,255,0.45)}
 .cly-k{font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fg3)}
 .cly-v{font-size:.78rem;color:var(--fg2);font-weight:300;line-height:1.5}
 
+/* bottom particle strip + scroll hint */
+.hr-bottom{flex:1;position:relative;overflow:hidden;border-top:1px solid var(--bord);min-height:80px}
+#bio-canvas-2{position:absolute;inset:0;width:100%;height:100%}
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.45rem;z-index:2;animation:scrollFloat 2.6s ease-in-out infinite}
+.scroll-line{width:1px;height:32px;background:linear-gradient(to bottom,transparent,var(--fg3))}
+.scroll-arr{font-size:.55rem;letter-spacing:.12em;color:var(--fg3);line-height:1}
+@keyframes scrollFloat{0%,100%{opacity:.3;transform:translateX(-50%) translateY(0)}50%{opacity:.65;transform:translateX(-50%) translateY(5px)}}
+
 /* ──── ABOUT ──── */
 #about{border-top:1px solid var(--bord);display:grid;grid-template-columns:200px 1fr;min-height:80vh}
 .a-side{border-right:1px solid var(--bord);padding:4rem 2rem;display:flex;flex-direction:column;justify-content:space-between;position:sticky;top:0;height:100vh}
